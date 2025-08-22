@@ -3,13 +3,61 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Pharmacy.MainPage">
 
-    <Image Source="main.png" >
-        
-    </Image>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
 
-    <VerticalStackLayout>
-        <ImageButton Source="gen_button.png" />
-        <ImageButton Source="pro_button.png" />
-    </VerticalStackLayout>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="100" />
+        </Grid.ColumnDefinitions>
 
+        <Label Text="남양새봄약국"
+       Grid.Row="0" Grid.ColumnSpan="3"
+       VerticalOptions="Center"
+       FontFamily="BMJUARegular"
+       HorizontalOptions="Center">
+            <Label.FontAttributes>
+                Bold
+            </Label.FontAttributes>
+            <Label.FontSize>
+                Large
+            </Label.FontSize>
+            <Label.TextColor>
+                Black
+            </Label.TextColor>
+        </Label>
+
+        <StackLayout
+            Grid.Row="1" Grid.ColumnSpan="3">
+
+            <Button BackgroundColor="#2FDF84" 
+                    Text="일반의약품" 
+                    CornerRadius="50" WidthRequest="300" HeightRequest="100"
+                    FontSize="32" FontFamily="BMJUARegular" TextColor="Black" 
+                    Padding="30" Margin="30"
+                    Clicked="goOTCDrug" />
+            
+            <Button BackgroundColor="#2FDF84" 
+                    Text="전문의약품" 
+                    CornerRadius="50" WidthRequest="300" HeightRequest="100"
+                    FontSize="32" FontFamily="BMJUARegular" TextColor="Black" 
+                    Padding="30" Margin="30"
+                    Clicked="goETCDrug" />
+
+        </StackLayout>
+            
+
+
+        <Label
+               Grid.Row="2" Grid.ColumnSpan="3"
+               BackgroundColor="White"
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center" />
+
+    </Grid>
 </ContentPage>

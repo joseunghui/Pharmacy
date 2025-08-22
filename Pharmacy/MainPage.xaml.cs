@@ -8,9 +8,15 @@
             InitializeComponent();
         }
 
-/*        private void OnCounterClicked(object? sender, EventArgs e)
-        {
 
-        }*/
+        private async void goOTCDrug(object? sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync(nameof(OTCManagementPage));
+        }
+
+        private async void goETCDrug(object? sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync(nameof(ETCManagementPage));
+        }
     }
 }
